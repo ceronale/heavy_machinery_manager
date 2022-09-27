@@ -24,16 +24,14 @@ const allMessages = {
   ja: jaMessages,
   zh: zhMessages,
 }
-interface Props {
-  children: React.ReactNode;
-}
+
 const I18nProvider: FC = ({children}) => {
   const locale = useLang()
   const messages = allMessages[locale]
 
   return (
     <IntlProvider locale={locale} messages={messages}>
-      {children}
+     
     </IntlProvider>
   )
 }
