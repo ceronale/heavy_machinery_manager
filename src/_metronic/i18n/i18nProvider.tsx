@@ -25,7 +25,7 @@ const allMessages = {
   zh: zhMessages,
 }
 
-const I18nProvider: FC = ({children}) => {
+const I18nProvider: FC = () => {
   const locale = useLang()
   const messages = allMessages[locale]
 
